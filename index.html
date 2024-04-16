@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Contract</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Generate Your University Contract</h1>
+
+    <div class="wrapper">
+      <!-- University Name -->
+      <label for="universityName">University Name:</label>
+      <input type="text" id="universityName" value="" />
+      <br />
+
+      <!-- Student Name -->
+      <label for="studentName">Student Name:</label>
+      <input type="text" id="studentName" value="" />
+      <br />
+
+      <!-- Student ID -->
+      <label for="studentID">Student ID:</label>
+      <input type="text" id="studentID" value="" />
+      <br />
+
+      <!-- Program of Study -->
+      <label for="programName">Program of Study:</label>
+      <input type="text" id="programName" value="" />
+      <br />
+
+      <!-- Degree Name (if needed) -->
+      <label for="degreeName">Degree Name:</label>
+      <input type="text" id="degreeName" value="" />
+      <br />
+
+      <!-- Start Year -->
+      <label for="startYear">Start Year:</label>
+      <input type="text" id="startYear" value="" />
+      <br />
+
+      <!-- End Year -->
+      <label for="endYear">End Year:</label>
+      <input type="text" id="endYear" value="" />
+      <br />
+
+      <!-- State or Country for Governing Law -->
+      <label for="stateOrCountry">Governing Law (State/Country):</label>
+      <input type="text" id="stateOrCountry" value="" />
+      <br />
+    </div>
+
+    <!-- Generate Button -->
+    <div>
+      <button class="btnExp">Create PDF</button>
+    </div>
+
+    <!-- Import jsPDF library and debugger -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+      integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

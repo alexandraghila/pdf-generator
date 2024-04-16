@@ -1,0 +1,64 @@
+/* General body styling */
+body {
+  background-color: #e0f0ff;
+  color: #003366;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the form wrapper */
+div.wrapper {
+  width: 100%;
+  max-width: 500px;
+  background-color: #f2f8ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #023758;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for all labels */
+label {
+  display: block;
+  margin: 10px 0 5px 30px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+
+/* Universal input styling */
+input[type="text"] {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #0077cc;
+  border-radius: 4px;
+}
+
+/* Hover effect for inputs */
+input[type="text"]:hover {
+  background-color: #ccddff;
+}
+
+/* Button styling */
+button.btnExp {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #053578;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for button */
+button.btnExp:hover {
+  background-color: #427cf1;
+  box-shadow: 10px 5px 5px #053578;
+}
