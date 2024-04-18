@@ -23,14 +23,14 @@ function pdfExport() {
   );
 
   // Retrieve values from form fields
-  var universityName = document.getElementById("universityName").value,
+  let universityName = document.getElementById("universityName").value,
     studentName = document.getElementById("studentName").value,
     studentID = document.getElementById("studentID").value,
     programName = document.getElementById("programName").value,
     degreeName = document.getElementById("degreeName").value,
     startYear = document.getElementById("startYear").value,
     endYear = document.getElementById("endYear").value,
-    stateOrCountry = document.getElementById("stateOrCountry").value;
+    country = document.getElementById("country").value;
 
   if (
     universityName === "" ||
@@ -40,11 +40,11 @@ function pdfExport() {
     degreeName === "" ||
     startYear === "" ||
     endYear === "" ||
-    stateOrCountry === ""
+    country === ""
   ) {
     alert("The PDF could not be created. Please complete all fields.");
   } else {
-    var y = margins.top + 20;
+    let y = margins.top + 20;
 
     // University and Student Info
     doc.setFontSize(12);
@@ -158,7 +158,7 @@ function pdfExport() {
     y = addTextWithWrap(
       doc,
       "2. Governing Law: This agreement shall be governed by the laws of " +
-        stateOrCountry +
+        country +
         ", without giving effect to any principles of conflicts of law.",
       y,
       doc.internal.pageSize.width - margins.left - margins.right
@@ -192,13 +192,23 @@ function pdfExport() {
     );
     doc.text("Date: __________________", 150, y + 10);
 
-    doc.save("enrollment-agreement.pdf");
+    doc.save("UniversityContract.pdf");
+
+    // Reset the input values
+    document.getElementById("universityName").value = "";
+    document.getElementById("studentName").value = "";
+    document.getElementById("studentID").value = "";
+    document.getElementById("programName").value = "";
+    document.getElementById("degreeName").value = "";
+    document.getElementById("startYear").value = "";
+    document.getElementById("endYear").value = "";
+    document.getElementById("country").value = "";
   }
 }
 
 function addTextWithWrap(doc, text, initialY, maxWidth) {
   const lineHeight = 5;
-  var splitText = doc.splitTextToSize(text, maxWidth);
+  let splitText = doc.splitTextToSize(text, maxWidth);
   splitText.forEach(function (line, index) {
     doc.text(line, 10, initialY + lineHeight * index);
   });
@@ -211,6 +221,10 @@ function checkPageAdd(doc, currentY, pageHeight, margins) {
     return margins.top; // Reset Y position to top margin of the new page
   }
   return currentY;
+}
+
+function resetForm() {
+  document.querySelector("form").reset();
 }
 
 document.addEventListener("DOMContentLoaded", function () {

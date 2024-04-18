@@ -9,6 +9,11 @@ body {
   align-items: center;
 }
 
+/* Styling for the header section */
+h1{
+  margin-bottom: 40px;
+}
+
 /* Styling for the form wrapper */
 div.wrapper {
   width: 100%;
@@ -32,7 +37,8 @@ label {
 }
 
 /* Universal input styling */
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
   width: 90%;
   padding: 8px;
   margin-bottom: 20px;
@@ -40,8 +46,25 @@ input[type="text"] {
   border-radius: 4px;
 }
 
+/* Italic placeholder for all input fields */
+input::placeholder {
+  font-style: italic;
+  color: #6ea4ca;
+}
+
+/* Styling the select form */
+select {
+  width: 93%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #0077cc;
+  border-radius: 4px;
+}
+
 /* Hover effect for inputs */
-input[type="text"]:hover {
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover {
   background-color: #ccddff;
 }
 
